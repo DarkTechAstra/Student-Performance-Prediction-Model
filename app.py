@@ -115,9 +115,6 @@ def predict_batch():
             missing_columns = [col for col in expected_columns if col not in df.columns]
             return f"Error: Missing columns in the CSV file: {', '.join(missing_columns)}", 400
 
-        # Since your dataset is already numeric, skip categorical transformations
-        # No transformation is applied here since the input is numeric
-
         # Check for any NaN values in the input data
         if df.isnull().values.any():
             return "Error: The input data contains NaN values. Please check the CSV for missing or invalid data.", 400
