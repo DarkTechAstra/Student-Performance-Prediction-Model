@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input[type="number"], select {
+            width: 65%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            padding: 13px 110px;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 24px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .description {
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .container2 {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container2 select {
+            margin-bottom: 30px;
+        }
+
+        .container2 .submit-button {
+            width: 400px;
+            margin: auto;
+            cursor: pointer;
+            border-radius: 25px;  
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Individual Prediction</h1>
+        <p class="description">Fill out the form below with individual student details to get the performance prediction.</p>
+        <form action="/predict-individual" method="post">
+            <label for="Hours_Studied">Hours Studied:</label>
+            <input type="number" id="Hours_Studied" name="hours_studied" required>
+
+            <label for="Attendance">Attendance:</label>
+            <input type="number" id="Attendance" name="attendance" required>
+
+            <label for="Parental_Involvement">Parental Involvement:</label>
+            <select id="Parental_Involvement" name="parental_involvement" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <label for="Access_to_Resources">Access to Resources:</label>
+            <select id="Access_to_Resources" name="access_to_resources" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <label for="Extracurricular_Activities">Extracurricular Activities:</label>
+            <select id="Extracurricular_Activities" name="extracurricular_activities" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="Sleep_Hours">Sleep Hours:</label>
+            <input type="number" id="Sleep_Hours" name="sleep_hours" required>
+
+            <label for="Previous_Scores">Previous Scores:</label>
+            <input type="number" id="Previous_Scores" name="previous_scores" required>
+
+            <label for="Motivation_Level">Motivation Level:</label>
+            <select id="Motivation_Level" name="motivation_level" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <label for="Tutoring_Sessions">Tutoring Sessions:</label>
+            <input type="number" id="Tutoring_Sessions" name="tutoring_sessions" required>
+
+            <label for="Teacher_Quality">Teacher Quality:</label>
+            <select id="Teacher_Quality" name="teacher_quality" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <label for="Physical_Activity">Physical Activity:</label>
+            <input type="number" id="Physical_Activity" name="physical_activity" required>
+
+            <label for="Learning_Disabilities">Learning Disabilities:</label>
+            
+                <select id="Learning_Disabilities" name="learning_disabilities" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            <div class="container2">
+
+            </div>
+    
+                <input class="submit-button" type="submit" value="Predict">
+            </div>
+           
+        </form>
+    </div>
+</body>
+</html>
