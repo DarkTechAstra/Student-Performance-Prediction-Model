@@ -127,6 +127,6 @@ def predict_batch():
         return send_file('predictions.csv', as_attachment=True, download_name='predictions.csv')
 
     return render_template('batch_input.html')
-### just a message for me friend emman to clarify how it works
+
 if __name__ == '__main__':
     app.run(debug=True)
